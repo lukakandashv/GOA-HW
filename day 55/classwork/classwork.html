@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Create a Form Dynamically with 
+            the JavaScript
+        </title>
+    </head>
+    <body style="text-align: center;">
+        <h1 style="color: rgb(54, 80, 231);">
+            facebook
+        </h1>
+        <p>
+          Click on the button to create
+          a form dynamically
+        </p>
+        <button onClick="GFG_Fun()">
+            click here
+        </button>
+        <p id="GFG_DOWN"></p>
+ <script>
+    var down = document.getElementById("GFG_DOWN");
+
+    var br = document.createElement("br"); 
+    function GFG_Fun() {
+
+    var form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "submit.php");
+
+    var FN = document.createElement("input");
+    FN.setAttribute("type", "text");
+    FN.setAttribute("name", "FullName");
+    FN.setAttribute("placeholder", "Full Name");
+
+     var DOB = document.createElement("input");
+     DOB.setAttribute("type", "text");
+     DOB.setAttribute("name", "dob");
+     DOB.setAttribute("placeholder", "DOB");
+
+     var EID = document.createElement("input");
+     EID.setAttribute("type", "text");
+     EID.setAttribute("name", "emailID");
+     EID.setAttribute("placeholder", "E-Mail ID");
+
+      var PWD = document.createElement("input");
+      PWD.setAttribute("type", "password");
+      PWD.setAttribute("name", "password");
+      PWD.setAttribute("placeholder", "Password");
+
+       var RPWD = document.createElement("input");
+       RPWD.setAttribute("type", "password");
+       RPWD.setAttribute("name", "reTypePassword");
+       RPWD.setAttribute("placeholder", "ReEnter Password");
+
+                var s = document.createElement("input");
+                s.setAttribute("type", "submit");
+                s.setAttribute("value", "Submit");
+
+                form.appendChild(FN); 
+
+                form.appendChild(br.cloneNode()); 
+
+                form.appendChild(DOB); 
+                form.appendChild(br.cloneNode()); 
+
+                form.appendChild(EID); 
+                form.appendChild(br.cloneNode()); 
+                
+                form.appendChild(PWD); 
+                form.appendChild(br.cloneNode()); 
+
+                form.appendChild(RPWD); 
+                form.appendChild(br.cloneNode()); 
+
+                form.appendChild(s); 
+
+                document.getElementsByTagName("body")[0]
+               .appendChild(form);
+            }
+        </script>
+    </body>
+</html>
