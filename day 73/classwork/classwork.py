@@ -1,0 +1,2 @@
+#Hoisted functions can be used before their declaration. As you can see, the JavaScript interpreter allows you to use the function before the point at which it was declared in the source code. This is extremely useful as the function can be called before defining it. One can then define the function anywhere in the program code.
+#  As can be seen from the code below, the Func_Hoisted() function is called before it is declared. Function declarations can be hoisted.
